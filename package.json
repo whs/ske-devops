@@ -5,9 +5,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "esbuild --outdir=dist **.ts",
-    "build:watch": "esbuild --outdir=dist --watch **.ts",
-    "start": "concurrently -s last 'npm:build:watch' 'OTEL_TRACES_SAMPLER=always_on node --watch dist/index.js'"
+    "start": "node --watch index.js"
   },
   "engines": {
     "node": ">=18 <=19"
